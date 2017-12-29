@@ -30,13 +30,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install numpy scipy pandas geopandas psycopg2 sqlalchemy networkx osmnx  
 RUN apt install --reinstall gnupg2
 RUN apt install dirmngr
-#RUN touch /etc/apt/sources.list.d/docker.list
-#RUN echo "deb http://downloads.skewed.de/apt/artful artful universe" >> /etc/apt/sources.list.d/docker.list
-#RUN echo "deb-src http://downloads.skewed.de/apt/artful artful universe" >> /etc/apt/sources.list.d/docker.list
-#RUN apt-key adv --keyserver pgp.skewed.de --recv-key 612DEFB798507F25
-#RUN apt-key list
-#RUN apt-get update
-#RUN apt-get install -y python3-graph-tool
+
 
 #Setup File System
 RUN mkdir ds
