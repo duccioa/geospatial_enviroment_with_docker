@@ -1,5 +1,5 @@
 # Setup a geospatial environment with Docker, Python and PostgreSQL
-These are support file for the Medium article ["A working environment for Geospatial analysis with Docker, Python and PostgreSQL"](https://medium.com/@duccio.aiazzi/a-working-environment-for-geospatial-analysis-with-docker-python-and-postgresql-670c2be58e0a).   
+These are support files for the Medium article ["A working environment for Geospatial analysis with Docker, Python and PostgreSQL"](https://medium.com/@duccio.aiazzi/a-working-environment-for-geospatial-analysis-with-docker-python-and-postgresql-670c2be58e0a).   
 
 The article is a short version of my search for a working environment for storing, processing and visualise geospatial data. It involves a **PostgreSQL** server running locally, a **Docker** image with **GDAL** and with **Python3** used as interpreter in **PyCharm Professional**, a local installation of **QGIS** (not necessary).   
 
