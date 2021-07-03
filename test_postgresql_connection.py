@@ -2,10 +2,10 @@
 # Import
 import psycopg2 as ps
 # Fetch connection address of localhost
-host_name = 'docker.for.mac.localhost'
-db_name = 'MY_DATABASE'
-usr_name = 'MY_USERNAME'
-psw = 'MY_PASSWORD'
+host_name = 'db'
+db_name = 'GEO'
+usr_name = 'DOCKER'
+psw = 'DOCKER'
 port_num = 5432
 
 conn_str = f"dbname={db_name} user={usr_name} host={host_name}"\
