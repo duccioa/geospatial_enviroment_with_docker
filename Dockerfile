@@ -39,10 +39,18 @@ RUN apt install dirmngr
 
 
 #Setup File System
-RUN mkdir ds
-ENV HOME=/ds
+RUN mkdir geo_sandbox
+ENV HOME=/geo_sandbox
 ENV SHELL=/bin/bash
-VOLUME /ds
-WORKDIR /ds
+VOLUME /geo_sandbox
+WORKDIR /geo_sandbox
+
+# copy everything over
+COPY . /geo_sandbox
+
+## alias python3 to python
+RUN ln -s /usr/bin/python3 /usr/bin/python
+#RUN ln -s /usr/bin/python3 /usr/bin/python & \
+#    ln -s /usr/bin/pip3 /usr/bin/pip
 
 CMD ["/bin/bash"]

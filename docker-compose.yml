@@ -13,7 +13,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - geo_sandbox:/app/geo_sandbox
+      - geo_sandbox:/geo_sandbox
     command:
       tail -f /dev/null       # keep the container alive
 
@@ -24,7 +24,7 @@ services:
       - dbbackups:/backups
     environment:
       # If you need to create multiple database you can add coma separated databases eg gis,data
-      - POSTGRES_DB=geo
+      - POSTGRES_DB=geo_sandbox
       - POSTGRES_USER=docker
       - POSTGRES_PASS=docker
       - ALLOW_IP_RANGE=0.0.0.0/0

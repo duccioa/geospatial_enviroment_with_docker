@@ -2,7 +2,8 @@
 
 - added a postgresql container and backup container to stack, backups are stored in a docker volume.
 - `test_postgresql_connection.py` will only work when run *inside* to `geo` container, which is building using Duccio Aiazzi's original `Dockerfile`
-
+- bring up the stack with `cd geo_sandbox && docker-compose up -d`
+- the postgis database is `geo_sandbox`
 
 # Setup a geospatial environment with Docker, Python and PostgreSQL
 These are support files for the Medium article ["A working environment for Geospatial analysis with Docker, Python and PostgreSQL"](https://medium.com/@duccio.aiazzi/a-working-environment-for-geospatial-analysis-with-docker-python-and-postgresql-670c2be58e0a).   
