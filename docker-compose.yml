@@ -1,18 +1,21 @@
-# anthony townsend <atownsend@cornell.edu>, 2 july 2021
-# n.b. postgres is on 25432 to avoid conflict with any local server
+version: '3'
 
+volumes:
+  geo_sandbox:
+  postgis-data:
+  dbbackups:
+    
+services:
 
-  #bug fix uid issue, unable to delete old puddles (on cornellbus)
   geo:
     restart: always
     build:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./data:/app/data
+      - geo_sandbox:/app/geo_sandbox
     command:
-      # keep the container alive
-      tail -f /dev/null 
+      tail -f /dev/null       # keep the container alive
 
   db:
     image: kartoza/postgis:13-3.1
